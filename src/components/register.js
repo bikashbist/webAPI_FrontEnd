@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Form, FormGroup } from 'react-bootstrap';
+import {  Redirect } from 'react-router-dom';
 import { Label, Input} from 'reactstrap';
 import axios from 'axios';
 
@@ -13,7 +14,8 @@ class Register extends Component {
             lastName:'',
             username:'',
             password:'',
-            type:''
+            type:'',
+            afterLogin:false
         }
 
     }
@@ -36,6 +38,7 @@ class Register extends Component {
                         username:'',
                         type:'',
                        password:'',
+                       afterLogin:true
         
                      })
                      console.log(response)
@@ -45,6 +48,11 @@ class Register extends Component {
     })
 
     render(){
+
+        if (this.state.afterLogin === true) {
+            return <Redirect to='/'/>
+        }
+
         return(
             <div className="container">
             <Form className="login-form mt-5">

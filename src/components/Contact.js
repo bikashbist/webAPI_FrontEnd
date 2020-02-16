@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import Nav from './Nav'; 
 class Contact extends Component {
     render(){
         return(
+            <div>
+            <Nav/>
             <div className="mt-5">
                 <div className="container">
                 <Form>
@@ -41,6 +44,7 @@ class Contact extends Component {
                     </Form>
                 </div>
                 
+            </div>
             </div>
         )
     }

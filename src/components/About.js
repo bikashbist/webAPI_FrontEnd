@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
 import { Container, Row, Col,Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import Nav from './Nav';  
 class About extends Component {
     render(){
         return(
+            <div>
+            <Nav/>
             <div className="mt-5">
+               
             <Container>
             <Row>
                 <Col xs="6">
@@ -25,6 +29,7 @@ class About extends Component {
                 </Col>
             </Row>
           </Container>
+          </div>
           </div>
         )
     }
